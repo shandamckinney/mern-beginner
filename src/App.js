@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     Axios.get('https://mern-tutoriallll.herokuapp.com/read', {name: name, rating: rating})
     .then((response) => {
-     setListOfRecipes(response.data);
+     console.log(response.data);
     })
     .catch((error) => {
       console.log(error)
