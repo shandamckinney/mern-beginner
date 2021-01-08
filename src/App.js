@@ -9,7 +9,7 @@ function App() {
   const [listOfRecipes, setListOfRecipes] = useState([]);
 
   const addRecipe = () => {
-    Axios.post('http://localhost:3001/addrecipe', {name: name, rating: rating}).then(() => {
+    Axios.post('https://mern-tutoriallll.herokuapp.com/addrecipe', {name: name, rating: rating}).then(() => {
       alert('yes');
     }).catch(() => {
       alert('nope');
@@ -17,7 +17,7 @@ function App() {
   };
 
   useEffect(() => {
-    Axios.get('http://localhost:3001/read', {name: name, rating: rating})
+    Axios.get('https://mern-tutoriallll.herokuapp.com/read', {name: name, rating: rating})
     .then((response) => {
      setListOfRecipes(response.data);
     })
